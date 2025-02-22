@@ -137,7 +137,7 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  padding: 10px 0; /* Reduced padding to decrease navbar height */
   transition: all 0.5s;
   z-index: 997;
   position: fixed;
@@ -149,68 +149,47 @@ h6 {
 .header .container-fluid {
   display: flex;
   align-items: center;
-  justify-content: start; /* Align items to the left */
-  padding-left: 0px; /* Remove any extra padding */
+  justify-content: start;
+  padding-left: 0px;
 }
 
 /* Adjust logo position */
 .header .logo {
-  margin-left: -50px; /* Moves the logo even further left */
-  margin-right: auto; /* Keeps it left-aligned */
+  margin-left: -50px;
+  margin-right: auto;
   line-height: 1;
 }
 
-/* Set the logo image size */
+/* Adjusted logo size */
 .header .logo img {
-  height: 120px;
-  width: 100px;
+  height: 100px; /* Reduced height */
+  width: 80px; /* Adjusted proportionally */
   transition: all 0.3s ease-in-out;
 }
 
-/* Logo text adjustments (if needed) */
-.header .logo h1 {
-  font-size: 28px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
-  text-transform: uppercase;
-}
-
-/* Get Started Button */
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+/* Reduce the height of navigation menu items */
+.navmenu a,
+.navmenu a:focus {
+  padding: 12px 15px; /* Decreased padding to shrink navbar height */
   font-size: 14px;
-  padding: 8px 25px;
-  margin: 0 0 0 30px;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
   .header .container-fluid {
-    justify-content: space-between; /* Keeps spacing good on smaller screens */
-    padding-left: 0px; /* Further adjustment for small screens */
+    justify-content: space-between;
+    padding-left: 0px;
   }
 
   .header .logo {
-    margin-left: -60px; /* Moves the logo further left on smaller screens */
+    margin-left: -60px;
     order: 1;
-    cursor: pointer;
   }
 
   .header .btn-getstarted {
     order: 2;
     margin: 0 15px 0 0;
-    padding: 6px 15px;
+    padding: 6px 12px;
   }
 
   .header .navmenu {
